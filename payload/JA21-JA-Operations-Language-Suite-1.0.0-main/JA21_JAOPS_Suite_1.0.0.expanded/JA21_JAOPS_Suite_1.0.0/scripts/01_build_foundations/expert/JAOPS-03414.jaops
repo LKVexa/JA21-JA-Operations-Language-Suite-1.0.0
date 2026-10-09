@@ -1,0 +1,21 @@
+ja source 0.3
+module corpus.ja_operations.example_03414
+use Operations
+policy explicit_network
+
+workspace SuiteJAOPS_03414 {
+    target windows-x64
+    compiler profile release
+    dependencies locked
+    environment offline
+    resource cpu 8 memory 10GB
+    network implicit
+    secret signing_key reference "vault://release/signing"
+    service worker_21 replicas 3
+    health_check worker_21 every 10s
+    upgrade rolling
+    rollback on health_failure
+    package msslb
+}
+assert deployment.reproducible == false
+emit package "SuiteJAOPS_03414.msslb"

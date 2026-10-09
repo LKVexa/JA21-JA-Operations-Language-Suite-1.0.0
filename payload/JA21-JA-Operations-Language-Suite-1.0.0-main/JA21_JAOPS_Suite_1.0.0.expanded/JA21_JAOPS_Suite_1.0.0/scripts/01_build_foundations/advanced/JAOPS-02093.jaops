@@ -1,0 +1,21 @@
+ja source 0.3
+module corpus.ja_operations.example_02093
+use Operations
+policy explicit_network
+
+workspace SuiteJAOPS_02093 {
+    target windows-x64
+    compiler profile release
+    dependencies locked
+    environment offline
+    resource cpu 7 memory 17GB
+    network disabled
+    secret signing_key reference "vault://release/signing"
+    service worker_58 replicas 2
+    health_check worker_58 every 22s
+    upgrade rolling
+    rollback on health_failure
+    package msslb
+}
+assert deployment.reproducible == true
+emit package "SuiteJAOPS_02093.msslb"

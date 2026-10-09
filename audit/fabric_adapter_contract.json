@@ -1,0 +1,14 @@
+{
+  "profile": "ja.operations",
+  "proposed_contribution": "Image build, lifecycle, resource limits and rollback",
+  "reuse_boundary": "Require dependency closure, actual boot and rollback receipts.",
+  "source_archive_sha256": "1f103193b9141d44ba5b93032bbec49d7180b8372d8f4ac0f4e785c3ab7a591b",
+  "source_evidence_paths": [
+    "payload/JA21-JA-Operations-Language-Suite-1.0.0-main/JA21_JAOPS_Suite_1.0.0.expanded/JA21_JAOPS_Suite_1.0.0/SUITE_CATALOG.md",
+    "payload/JA21-JA-Operations-Language-Suite-1.0.0-main/JA21_JAOPS_Suite_1.0.0.expanded/JA21_JAOPS_Suite_1.0.0/catalogs/FEATURE_ATLAS.md",
+    "payload/JA21-JA-Operations-Language-Suite-1.0.0-main/JA21_JAOPS_Suite_1.0.0.expanded/JA21_JAOPS_Suite_1.0.0/specification/GRAMMAR_SPECIFICATION.md",
+    "payload/JA21-JA-Operations-Language-Suite-1.0.0-main/JA21_JAOPS_Suite_1.0.0.expanded/JA21_JAOPS_Suite_1.0.0/specification/LANGUAGE_SPECIFICATION.md"
+  ],
+  "executable_adapter_implemented": false,
+  "mathematical_foundation": "8S Penteract-S3 Master Coupled Mechanics Law for intended JA model; typed operator semantics require their owning profile."
+}

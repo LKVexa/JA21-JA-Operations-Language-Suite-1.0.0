@@ -1,0 +1,5 @@
+profile ja.operations
+compiler ja-kernel-0.3
+target windows-x64
+network disabled
+dependencies locked

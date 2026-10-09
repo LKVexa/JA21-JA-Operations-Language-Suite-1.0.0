@@ -1,0 +1,21 @@
+ja source 0.3
+module starter.operations.offline_service
+use Operations
+policy no_network
+
+workspace OfflineService {
+    target windows-x64
+    compiler profile release
+    dependencies locked
+    environment offline
+    resource cpu 2 memory 4GB
+    network disabled
+    secret signing_key reference "local://keys/release-signing"
+    service worker_main replicas 2
+    health_check worker_main every 15s
+    upgrade rolling
+    rollback on health_failure
+    package msslb
+}
+assert deployment.reproducible == true
+emit package "OfflineService.msslb"
